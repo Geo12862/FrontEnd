@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head> 
+        <title>Documento | Texto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <meta name="description" content="Diseño y Desarrollo Web", initial-scale=1.0>
+        <meta name="keywords" content="diseño web, desarrollo web, seo, posicionamiento web", initial-scale=1.0>
+        <meta name="author" content="Jorge Martín Menéndez", initial-scale=1.0>
+        <link rel="stylesheet" href="estilos_B3.css"/>
+        
+    </head>
+    <body>
+        <header>
+            <div class="contenedor">
+                <div id="marca">
+                    <h1><span class="resaltado">DAW LM Jorge</span> Web Formulario</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Activitat Bloc 3.html">Inicio</a></li>
+                        <li><a href="audios.html">Audios</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li class="actual"><a href="contacto.html">Formulario</a></li>            <!-- href="mailto:jmartinmen@cifpfbmoll.eu"-->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="boletin">
+            <div class="contenedor">
+                <h1>Suscribete a nuestro hogar</h1>
+                <form>
+                    <input type="email" name="email" placeholder="Ingrese el email...">
+                    <button type="submit" class="boton1">Suscribete</button>
+                </form>
+            </div>
+        </section> 
+
+        <section id="main">
+            <div class="contenedor">
+                <article id="main-col">
+                    <h1>Contacto</h1>
+                    <form>
+                        <label>Nombre: </label>
+                        <input type="text" name="nombre" placeholder="Ingresar tu nombre" size="40" pattern="[a-zA-Z]{1,40}">
+                        <br>
+                        <label>Edad: </label>
+                        <input type="number" name="edad" placeholder="Pon tu edad" size="3" step="1" min="10" max="100">
+                        <label>E-mail: </label>
+                        <input type="text" name="email" placeholder="Ingresar tu email" >
+                        <br>
+                        <label>Mensaje: </label>
+                        <textarea id="comentari" size="35"></textarea>
+                        <br>
+                        <p><input type="submit" class="boton2" value="Enviar">
+                            <input type="reset" class="boton2" value="Borrar">
+                            <input type="button" class="boton2" value="Agregar" onclick="Comentari()">
+                        </p>
+                    </form>
+                </article>
+
+                <aside id="lateral">
+                    <div class="oscuro">
+                        <h3>Que hacemos</h3>
+                        <p>Pon tus datos y comentaríos que quieras enviar. Pero si quieres contactar conmigo directamente mandame un correo a este <a href="mailto:jmartinmen@cifpfbmoll.eu">email</a></p>
+                        <p id="com"></p>
+                    </div>
+                </aside>
+            </div>
+
+        </section>
+        <script>
+            function Comentari(){
+                var comNou = document.createElement('p');
+                var com = document.getElementById("comentari").value;
+                var text = document.createTextNode(com);
+                comNou.appendChild(text);
+                document.getElementById("com").appendChild(comNou);
+            }
+        </script>
+
+        <footer>   
+            <p>Jorge Martín Menéndez, Diseño de Aplicaciones Web, &copy 2020/21</p>
+        </footer>
+    </body>
+
+</html>
