@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head> 
+        <title>Documento | Videos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <meta name="description" content="Diseño y Desarrollo Web", initial-scale=1.0>
+        <meta name="keywords" content="diseño web, desarrollo web, seo, posicionamiento web", initial-scale=1.0>
+        <meta name="author" content="Jorge Martín Menéndez", initial-scale=1.0>
+        <link rel="stylesheet" href="estilos_B3.css"/>
+        
+    </head>
+    <body>
+        <header>
+            <div class="contenedor">
+                <div id="marca">
+                    <h1><span class="resaltado">DAW LM Jorge</span> Web Videos</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Activitat Bloc 3.html">Inicio</a></li>
+                        <li><a href="audios.html">Audios</a></li>
+                        <li class="actual"><a href="videos.html">Videos</a></li>
+                        <li><a href="contacto.html">Formulario</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="boletin">
+            <div class="contenedor">
+                <h1>Suscribete a nuestro hogar</h1>
+                <form>
+                    <input type="email" name="email" placeholder="Ingrese el email...">
+                    <button type="submit" class="boton1">Suscribete</button>
+                </form>
+            </div>
+        </section> 
+
+        <section id="main">
+            <div class="contenedor">
+                <article id="main-col">
+                    <h1>Videos</h1>
+                    <p>Visualiza videos en varios formatos</p>
+                    <p class="oscuro">Espero que les guste la selección</p>
+                    <ul id="servicios">
+                        <li>
+                            <h3>Closer</h3>
+                            <img src="img/Closer.jpg">
+                            <video src="video/Closer - The Chainsmokers ft. Halsey.mp4" controls type="video/mp4">
+                            <img src="Closer.jpg" alt="video no soportado" />
+                            </video>
+                            <p>Tipo de video: Video Musical</p>
+                            <p>Género: Musical</p>
+                        </li>
+                        <li>
+                            <h3>Timeline</h3>
+                            <img src="img/Timeline.jpg">
+                            <video src="video/TIMELINE (Trailer español).mp4" controls type="video/mp4">
+                                <img src="img/Timeline.jpg" alt="video no soportado" />
+                            </video>
+                            
+            
+                            <p>Tipo de video: Trailer</p>
+                            <p>Género: Ficción, Viages en el Tiempo</p>
+                        </li>
+                        <li>
+                            <h3>Vampiros</h3>
+                            <img src="img/Vampiros.jpg">
+                            <iframe src="https://www.youtube.com/embed/F-CktynvD9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
+                            <p>Tipo de video: Película Online</p>
+                            <p>Género: Ficción, Terror, Comedia</p>
+                        </li>
+                    </ul>
+                    
+
+                </article>
+
+                <aside id="lateral">
+                    <div class="oscuro">
+                        <h3>Que Vemos</h3>
+                        <p>Mira Videos Musical, Trailer o Película con enlace directo a youtube</p>
+                        <form>
+                            <label>Comentario: </label>
+                            <input type="text" name="comentari" size="35" id="comentari">
+                            <br>
+                            <p>
+                                <input type="button" class="boton2" value="Agregar" onclick="Comentari()">
+                                <input type="reset" class="boton2" value="Borrar">
+                            </p>
+                        </form>
+                        <p id="com"></p>
+                    </div>
+                </aside>
+            </div>
+
+        </section>
+        <script>
+            function Comentari(){
+                var comNou = document.createElement('p');
+                var com = document.getElementById("comentari").value;
+                var text = document.createTextNode(com);
+                comNou.appendChild(text);
+                document.getElementById("com").appendChild(comNou);
+            }
+        </script>
+
+        <footer>   
+            <p>Jorge Martín Menéndez, Diseño de Aplicaciones Web, &copy 2020/21</p>
+        </footer>
+    </body>
+
+</html>
