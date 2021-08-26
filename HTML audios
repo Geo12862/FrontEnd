@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Documento | Audios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <meta name="description" content="Diseño y Desarrollo Web", initial-scale=1.0>
+        <meta name="keywords" content="diseño web, desarrollo web, seo, posicionamiento web", initial-scale=1.0>
+        <meta name="author" content="Jorge Martín Menéndez", initial-scale=1.0>
+        <link rel="stylesheet" href="estilos_B3.css"/>
+        
+    </head>
+    <body>
+        <header>
+            <div class="contenedor">
+                <div id="marca">
+                    <h1><span class="resaltado">DAW LM Jorge</span> Web Audio</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Activitat Bloc 3.html">Inicio</a></li>
+                        <li class="actual"><a href="audios.html">Audios</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="contacto.html">Formulario</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="boletin">
+            <div class="contenedor">
+                <h1>Suscribete a nuestro hogar</h1>
+                <form>
+                    <input type="email" name="email" placeholder="Ingrese el email...">
+                    <button type="submit" class="boton1">Suscribete</button>
+                </form>
+            </div>
+        </section> 
+
+        <section id="main">
+            <div class="contenedor">
+                <article id="main-col">
+                    <h1>Audios</h1>
+                    <p>Escucha audio de varios artistas para tu entretenimiento</p>
+                    <p class="oscuro">Un poco de Pop-Rock</p>
+
+                    <ul id="reproduc">
+                        <li>
+                            <h3>It's My Life</h3>
+                            <audio src="music/Bon Jovi - It's My Life.mp3" preload="none" controls></audio>
+
+                            <p class="autor">Autor:</p>
+                            <a class="page" href="https://www.bonjovi.com/"> Bon Jovi</a>
+                            <img class="izq" src="img/Bon Jovi.jfif" alt="Bon Jovi">
+                        </li>
+                            
+                            
+                        <li>
+                            <h3>King George</h3>
+                            <audio src="music/Dover - King George.mp3" preload="none" controls></audio>
+
+                            <p class="autor">Autor:</p>
+                            <a class="page" href="https://dover.es/" style="color:;"  text:white> Dover </a>
+                            <img class="izq" src="img/Dover.jpg" alt="Dover">
+                        </li>
+                            
+                            
+                            
+                        <li>
+                            <h3>Let's Love</h3>
+                            <audio src="music/David Guetta & Sia - Let's Love (Remix).mp3" preload="none" controls></audio>
+
+                            <p class="autor">Autor:</p>
+                            <a class="page" href="https://davidguetta.com/donate/" style="color:;" text:white> David Guetta</a>
+                            <img class="izq" src="img/David Guetta.jpg" alt="David Guetta">
+                        </li>
+                            
+                            
+                            
+                        <li>
+                            <h3>No tears left to cry</h3>
+                            <audio src="music/Ariana Grande - no tears left to cry.mp3" preload="none" controls></audio>
+
+                            <p class="autor">Autor:</p>
+                            <a class="page" href="https://www.arianagrande.com/" style="colo:;" text:white> Ariana Grande</a>
+                            <img class="izq" src="img/Ariana Grande.jfif" alt="Ariana Grande">
+                        </li>
+                            
+                    </ul>
+                </article>
+
+                <aside id="lateral">
+                    <div class="oscuro">
+                        <h3>Que escuchamos</h3>
+                        <p>Escuchamos categorias Pop-Rock</p>
+                        <form>
+                            <label>Comentario: </label>
+                            <input type="text" name="comentari" size="35" id="comentari">
+                            <br>
+                            <p>
+                                <input type="button" class="boton2" value="Agregar" onclick="Comentari()">
+                                <input type="reset" class="boton2" value="Borrar">
+                            </p>
+                        </form>
+                        <p id="com"></p>
+                    </div>
+                </aside>
+            </div>
+
+        </section>
+        <script>
+            function Comentari(){
+                var comNou = document.createElement('p');
+                var com = document.getElementById("comentari").value;
+                var text = document.createTextNode(com);
+                comNou.appendChild(text);
+                document.getElementById("com").appendChild(comNou);
+            }
+        </script>
+
+        <footer>   
+            <p>Jorge Martín Menéndez, Diseño de Aplicaciones Web, &copy 2020/21</p>
+        </footer>
+    </body>
+    
+
+
+</html>
