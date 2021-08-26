@@ -1,0 +1,460 @@
+/*Ponemos el estilo de letra y su familia para todo el texto del body*/
+body { 
+    font-family: 15px "Arial", Helvetica, sans-serif;   /*tipo de letra y su familia*/
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;                   /*color de fondo*/
+}
+/*Estilos Globales*/
+.contenedor{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;                               /*escondido*/
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+.boton1{
+    height: 38px;
+    width: 100px;
+    background: #e8491d;                    
+    border: 1;
+    padding-left: 20px;                             /*margen a la izquierda*/
+    padding-right: 20px;                            /*margen a la derecha*/
+    color: #ffffff;
+}
+/*Encabezados*/
+header{
+    background-color: #24282b;
+    color: #ffffff;                                 /*Color de texto*/
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 5px solid #1293d4;
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;                          /*para quitar linea de debajo de los hipervínculos*/
+    text-transform: uppercase;                      /*Convierte el texto todo en mayúscula*/
+    font-size: 16px;
+}
+
+header li{
+    float: left;
+    display: inline;                                /*para que se desplieguen en línea*/
+    padding: 0 20px 0 20px;                          /*top, right, botton, left*/
+}
+
+header #marca{
+    float: left;
+}
+
+header #marca h1{
+    margin: 0;
+}
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+/*juntamos 2 headers, logo y etiqueta activa, para ponerle la misma característica*/
+header .resaltado, header .actual a{                                /*Para resaltar la página de la cabecera donde estamos*/
+    color: #1293d4;
+    font-weight: bold;                                              /*Ponemos las letras en negrita*/
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+/*Cabecera con imagen*/
+#cabecera{
+    min-height: 400px;
+    background: url('img/Fondo-portatil.jpg') no-repeat 0 -400px;     /*al estar en distintas carpetas accedemos a una carpeta fuera de nuestro contenido de css mediante ../nombre de la carpeta/nombre del archivo*/
+    background-size: cover;                                        /*Estos comandos sirven para ajustar cualquier imagen en nuesto encapsulado*/
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+    text-align: center;
+    color: #ffffff;
+}
+#cabecera h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+#cabecera p{
+    font-size: 20px;
+}
+
+/*Formulario Boletin*/
+#boletin{
+    padding: 15px;
+    color: #ffffff;
+    background: #24282b;
+    display: flex;
+    justify-content: space-between;
+}
+#boletin h1{
+    float: left;
+    display: inline;
+    
+}
+#boletin form{
+    float: right;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#boletin input[type="email"]{
+    padding: 4px;
+    height: 28px;
+    width: 220px;
+    display: inline-block;
+}
+
+/*Estilos para los contenedores de las cajas (imagenes)*/
+#cajas{
+    margin-top: 20px;                                       /*Para separar del margen superior*/
+}
+
+#cajas .caja{
+    float: left;
+    text-align: center;
+    width: 30%;                                             /*Para que se adapte a cualquier tipo de tamaño de monitor*/
+    padding: 10px;
+}
+
+#cajas .caja img{
+    width: 100px;
+}
+
+#cajas .a h3{                                /*Para resaltar la página de la cabecera donde estamos*/
+    color: #000203;
+    font-weight: bold;                                              /*Ponemos las letras en negrita*/
+}
+
+
+/*Para del Lateral*/
+aside#lateral{
+    float: right;   /*se puede usar otros comandos mejores, pero este me iba bien para lo que deseaba*/
+    width: 30%;
+    margin-top: 10px;
+    
+}
+
+.oscuro{
+    padding: 15px;
+    background-color: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Main-ind*/
+#main-ind{
+    float: left;
+}
+#main-ind input[name="nombre"]{
+    width: 50%;
+    background-position-x: left;
+}
+#main-ind input[name="edad"]{
+    width: 10%;
+    background-position-x: right;
+}
+
+#main-ind input[type="submit"]{
+    width: 20%;
+    background-position-x: left;
+}
+#main-ind input[type="reset"]{
+    width: 20%;
+    background-position-x: right;
+
+}#main-ind input[type="button"]{
+    width: 20%;
+    background-position-x: right;
+
+}
+
+/*Main-col*/
+#main-col{
+    float: left;
+    width: 65%;
+}
+#main-col input[type="submit"]{
+    width: 20%;
+    background-position-x: left;
+}
+#main-col input[type="reset"]{
+    width: 20%;
+    background-position-x: right;
+
+}#main-col input[type="button"]{
+    width: 20%;
+    background-position-x: right;
+
+}
+
+
+
+
+/*Servicios*/
+ul#servicios li{
+    list-style: none;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+ul#servicios li img{
+    padding-right: 10%;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 140px;
+    height: 240px;
+    
+    
+    
+}
+ul#servicios li video, iframe{
+    padding-left: 10%;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 340px;
+    height: 240px;
+    
+    
+    
+}
+/*reproduc*/
+ul#reproduc li{
+    list-style: none;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+ul#reproduc li audio{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: inline-block;
+    margin-bottom: -20px;
+    justify-content: left;
+}
+.autor{
+    padding: 15px;
+    background-color: grey;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    justify-content: left;
+}
+.izq{
+    padding-left: 10%;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 240px;
+    height: 140px;
+}
+.page{
+    padding: 15px;
+    background-color: #e8491d;
+    color: #ffffff;
+    display: inline-block;
+    justify-content: right;
+    align-items: flex-end;
+    text-decoration: none;
+    background-position-x: right;
+    
+}
+
+
+
+/*Footer o pie de página*/
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #1293d4;
+    text-align: center;
+    position: static;
+    bottom: 0;
+    width: 100%;
+
+}
+
+/*Formulario de Contacto, ponemos tamaño y posicionamiento en contacto.html*/
+input, button, textarea{
+    width: 100%;
+    height: 35px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}
+textarea{
+    height: 220px;
+}
+.boton2{
+    background: #e8491d; 
+    color: #ffffff;                   
+}
+
+/*Media Queris SSS, para que los bloques creados se adapten a una reducción de la pantalla*/
+@media(max-width: 1024px){
+    body{
+        background-color: #ffbcbc;
+        display:inline-block; 
+    }
+    header #marca,
+    header nav,
+    header nav li,
+    #boletin h1,
+    #boletin form,
+    #caja .caja,
+    article#main-col, 
+    article#main-ind,
+    aside#lateral{
+        float: none;
+        text-align: center;
+        width: 100%;
+        display:inline-block;
+    }
+    header{
+        padding-bottom: 20px;
+        display:inline-block;
+    }
+    #boletin h1{
+        margin-top: 40px;
+        display:inline-block;
+    }
+    #boletin button{
+        display:inline-block;
+        width: 100%;
+    }
+
+    #boletin form input[type="email"]{
+        width: 100%;
+        margin-bottom: 5px;
+        display:inline-block;
+    }
+    input, textarea{
+        width: 98%;
+        display:inline-block;
+    }
+}
+@media(max-width: 768px){
+    body{
+        background-color: #f4f4f4; 
+    }
+    header #marca,
+    header nav,
+    header nav li,
+    #boletin h1,
+    #boletin form,
+    #caja .caja,
+    article#main-col, 
+    article#main-ind,
+    aside#lateral{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header{
+        padding-bottom: 20px;
+    }
+    #boletin h1{
+        margin-top: 40px;
+    }
+    #boletin button{
+        display: block;
+        width: 100%;
+    }
+
+    #boletin form input[type="email"]{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    input, textarea{
+        width: 98%;
+    }
+}
+@media(max-width: 480px){
+    body{
+        background-color: rgb(107, 208, 255); 
+    }
+    header #marca,
+    header nav,
+    header nav li,
+    #boletin h1,
+    #boletin form,
+    #caja .caja,
+    article#main-col, 
+    article#main-ind,
+    aside#lateral{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header{
+        padding-bottom: 20px;
+    }
+    #boletin h1{
+        margin-top: 40px;
+    }
+    #boletin button{
+        display: block;
+        width: 100%;
+    }
+
+    #boletin form input[type="email"]{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    input, textarea{
+        width: 98%;
+    }
+}
+@media(max-width: 320px){
+    body{
+        background-color: #b6ffc6;
+        display:inline-block; 
+    }
+    header #marca,
+    header nav,
+    header nav li,
+    #boletin h1,
+    #boletin form,
+    #caja .caja,
+    article#main-col, 
+    article#main-ind,
+    aside#lateral{
+        float: none;
+        text-align: center;
+        width: 100%;
+        display:inline-block;
+    }
+    header{
+        padding-bottom: 20px;
+        display:inline-block;
+    }
+    #boletin h1{
+        margin-top: 40px;
+        display:inline-block;
+    }
+    #boletin button{
+        display: block;
+        width: 100%;
+        display:inline-block;
+    }
+
+    #boletin form input[type="email"]{
+        width: 100%;
+        margin-bottom: 5px;
+        display:inline-block;
+    }
+    input, textarea{
+        width: 98%;
+        display:inline-block;
+    }
+}
